@@ -35,6 +35,7 @@ if (is_active_sidebar('first-footer-widget-area') || is_active_sidebar('second-f
                         } else {
                             $logo = "<img src='" . ONEPAGE_DIR_URI . 'assets/images/site_logo.png' . "' alt='logo' />";
                         }
+                        $logo = "<img src='https://nightowlztt.com/wp-content/uploads/2017/11/footer-logo-e1509716637788.png' alt='logo' />";
                     }
                     echo $logo;
                     $socials = Onepage_Data::get_instance()->social();

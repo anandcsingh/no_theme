@@ -1745,7 +1745,7 @@ table a:not(.btn), .table a:not(.btn){
 .bottom_footer p {
     display: block;
     margin-bottom: 15px;
-    color: #d7d7d7;
+    color: #D4AF37;
 }
 .bottom_footer .footer_social {
     list-style: none;
@@ -1779,11 +1779,11 @@ table a:not(.btn), .table a:not(.btn){
 .section_9 {}
 .scroll-top {
     margin-bottom: 25px;
-    color: #fff;
+    color: #D4AF37;
     margin-bottom: 5px;
 }
 .scroll-top a {
-    color: #fff;
+    color: #D4AF37;
     display: block;
     font-size: 20px;
 }
