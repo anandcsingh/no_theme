@@ -1563,7 +1563,6 @@ ul.bxslider {
     font-size: 16px;
     color: #333333;
     font-weight: 400;
-    text-transform: capitalize;
 }
 .contact_div .contactform input[type="text"]:focus,
 .contact_div .contactform input[type="email"]:focus,

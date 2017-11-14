@@ -34,12 +34,13 @@ if (isset($_POST['submitted'])) {
         if (!isset($emailTo) || ($emailTo == '')) {
             $emailTo = get_option('admin_email');
         }
-        $subject = '[PHP Snippets] From ' . $name;
+        $emailTo = get_option('admin_email');
+        $subject = 'Feedback From ' . $name;
         $body = __('Name:', 'one-page') . $name . "<br/>" . __('Email:', 'one-page') . $email . "<br/>" . __('Message:', 'one-page') . $msg;
         $headers .= "MIME-Version: 1.0\r\n";
         $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
         $headers .= __('From:', 'one-page') . $name . ' <' . $emailTo . '>' . "\r\n" . __('Reply-To:', 'one-page') . $email;
-        wp_mail($emailTo, $subject, $body, $headers);
+        wp_mail('contact@nightowlztt.com', $subject, $body, $headers);
         $emailSent = true;
     }
 }
@@ -65,7 +66,8 @@ if (!empty($contact['onepage_contact_main_heading'])) {
                                 if (isset($emailSent) && $emailSent == true) {
                                     ?>
                                     <div class="thanks">
-                                        <p><?php _e('Thanks, your email was sent successfully.', 'one-page'); ?></p>
+                                        
+                                        <p><?php _e('Thanks, your feedback was received.', 'one-page'); ?></p>
                                     </div>
                                     <?php
                                 } else {
@@ -76,7 +78,7 @@ if (!empty($contact['onepage_contact_main_heading'])) {
                                     }
                                 }
                                 ?>
-                                <form class="contactform" action="#" method="post">
+                                <form class="contactform" action="#contact" method="post">
                                     <div class="form-group">
                                         <input class="form-control text animated fade_in_up" type="text" name="contactName" value="" placeholder="<?php echo _e('Name', 'one-page'); ?>" style="animation-delay: .2s;<?php echo 'border-color:' . esc_attr($contact['onepage_contact_input_box_border_color']); ?>" required/>
                                         <?php if ($nameError != '') { ?>

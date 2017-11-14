@@ -455,6 +455,27 @@ function onepage_main_image() {
     }
 }
 
+function onepage_main_image_with_content_link() {
+    global $post, $posts;
+//This is required to set to Null
+    $id = '';
+    $the_title = '';
+// Till Here
+    $permalink = get_permalink($id);
+    $content = wp_strip_all_tags(apply_filters('the_content', get_post_field('post_content', $my_postid)));
+    $content = preg_replace('/(<)([p])(\w+)([^>]*>)/', "", $content);
+    $homeLink = get_template_directory_uri();
+    $first_img = '';
+    $output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
+    if (isset($matches [1] [0])) {
+        $first_img = $matches [1] [0];
+    }
+    if (empty($first_img)) { //Defines a default image
+    } else {
+        print "<a href='$content'><img src='$first_img' width='250px' height='160px' class='postimg wp-post-image' alt='$the_title' /></a>";
+    }
+}
+
 //For Attachment Page
 /**
  * Prints HTML with meta information for the current post (category, tags and permalink).
