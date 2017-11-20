@@ -598,7 +598,7 @@ class Onepage_Customizer {
 		 * @return array
 		 */
 		$wp_customize->add_panel( 'team_setting_panel', array(
-			'title' => __( 'Team Section', 'one-page' ),
+			'title' => __( 'Sponsors', 'one-page' ),
 			'description' => __( 'Allows you to set up pricing section for OnePage Theme.', 'one-page' ), //Descriptive tooltip
 //            'priority' => '11',
 			'capability' => 'edit_theme_options'

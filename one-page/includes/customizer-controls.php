@@ -276,13 +276,13 @@ function onepage_sections() {
 
     $sections['service_section'] = array(
         'id' => 'service_section',
-        'label' => __('Service Section', 'one-page'),
+        'label' => __('Package Section', 'one-page'),
         'callback' => 'onepage_service_section',
     );
 
     $sections['blog_section'] = array(
         'id' => 'blog_section',
-        'label' => __('Blog Section', 'one-page'),
+        'label' => __('Social Section', 'one-page'),
         'callback' => 'onepage_blog_section',
     );
 
@@ -306,13 +306,13 @@ function onepage_sections() {
 
     $sections['price_section'] = array(
         'id' => 'price_section',
-        'label' => __('Price Section', 'one-page'),
+        'label' => __('FAQs Section', 'one-page'),
         'callback' => 'onepage_price_section',
     );
 
     $sections['team_section'] = array(
         'id' => 'team_section',
-        'label' => __('Team Section', 'one-page'),
+        'label' => __('Sponsors Section', 'one-page'),
         'callback' => 'onepage_team_section',
     );
 
