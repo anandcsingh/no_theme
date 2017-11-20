@@ -1432,7 +1432,6 @@ ul.bxslider {
     text-align: center;
 }
 .team_wrapper .team_item {
-    border: 1px solid #C5C5C5;
     text-align: center;
     margin: 0 2px 60px 2px;
     overflow: hidden;
@@ -1445,7 +1444,6 @@ ul.bxslider {
 .team_wrapper .team_item .team_image {
     width: 257px;
     height: 220px;
-    margin-bottom: 26px;
     overflow: hidden;
     position: relative;
 }
@@ -1460,13 +1458,7 @@ ul.bxslider {
     left: 0;
     visibility: hidden;
 }
-.team_wrapper .team_item .team_image:hover .team_caption {
-    visibility: visible;
-    text-align: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
+
 .team_wrapper .team_item .team_image .team_caption p {
     color: #fff;
     margin: 50px 10px 20px 10px;

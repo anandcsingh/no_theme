@@ -12,7 +12,7 @@ if (!empty($services)) {
     if ($non_empty_count > 0) {
         ?>
         <!--service section-->
-        <section id="services" class="section_2">
+        <section id="package" class="section_2">
             <div class="services_div">
                 <div class="container">
                     <div class="row">
@@ -23,24 +23,25 @@ if (!empty($services)) {
                         </div>
                     </div>
                     <div class="row">
-                        <?php
-                        //print_var( $services );
-                        $count = 1;
-                        foreach ($services['services'] as $key => $service) {
-                            ?>
-                            <!-- Service Box <?php echo $count; ?> -->
-                            <div class="col-md-3">
-                                <div class="services_item animated fade_in_up" style="animation-delay: <?php echo esc_attr($service['animation']); ?>">
-                                    <span class="glyphicon <?php echo esc_attr($service['onepage_service_box_icon_' . $count]); ?> <?php echo esc_attr($service['row']); ?>"></span>
-                                    <h4><?php echo esc_html($service['onepage_service_box_heading_' . $count]); ?></h4>
-                                    <p><?php echo esc_html($service['onepage_service_box_desc_' . $count]); ?></p>
-                                </div>
-                            </div>
-                            <!-- /Service Box <?php echo $count; ?> -->           
-                            <?php
-                            $count++;
-                        }
-                        ?>
+                    <?php
+rewind_posts();
+$post_id = 336;
+$queried_post = get_post($post_id);
+?>
+  <div class="col-sm-8">
+
+<?php if (has_post_thumbnail( $queried_post->ID ) ): ?>
+  <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $queried_post->ID ), 'single-post-thumbnail' ); ?>
+  <img src='<?php echo $image[0]; ?>' />
+
+<?php endif; ?>
+</div>
+                    <div class="col-sm-4">
+   
+				   
+												 
+<?php echo $queried_post->post_content; ?>
+</div>
                     </div>
                 </div>
             </div>

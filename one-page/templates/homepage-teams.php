@@ -1,6 +1,6 @@
 <?php
 $teams = Onepage_Data::get_instance()->team();
-if (!empty($teams)) {
+if (true) {
     $count = 1;
     $non_empty_count = 0;
     foreach ($teams['teams'] as $team) {
@@ -9,10 +9,10 @@ if (!empty($teams)) {
         }
         $count++;
     }
-    if ($non_empty_count > 0) {
+    if (true) {
         ?>
         <!--Team Information section-->
-        <section id="team" class="section_8">
+        <section id="sponsors" class="section_8">
             <div class="team_div">
                 <div class="container">
                     <div class="row">
@@ -24,40 +24,26 @@ if (!empty($teams)) {
                     </div>
                     <div class="row">
                         <div class="team_wrapper">
-                            <?php
-                            $count = 1;
-                            foreach ($teams['teams'] as $team) {
-                                ?>
-                                <div class="col-md-3 col-sm-6">
-                                    <div class="team_item animated bounce" style="animation-delay: <?php echo esc_attr($team['animation']); ?>">
+                       
+                            <?php $query = new WP_Query( 'cat=3' ); ?>			   
+ <?php if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
+<div class="col-md-3 col-sm-6 col-md-offset-1">
+                                    <div class="team_item animated bounce" style="animation-delay: ">
                                         <div class="team_image">
-                                            <img src='<?php echo esc_url($team['onepage_member' . $count . '_image_link']); ?>' />
-                                            <div class="team_caption">
-                                                <p><?php echo wp_kses_post($team['onepage_member' . $count . '_caption_text']); ?></p>
-                                            </div>
+                                        <a href="<?php the_title(); ?>">
+                                            <?php the_post_thumbnail(); ?>
+                                            
+                                            </a>
                                         </div>
-                                        <h4><?php echo esc_html($team['onepage_member' . $count . '_name']); ?></h4>
-                                        <span><?php echo esc_html($team['onepage_member' . $count . '_designation']); ?></span>
-                                        <ul class="team_social">
-                                            <li>
-                                                <a href="<?php echo esc_url($team['onepage_member' . $count . '_fb_link']); ?>"><i class="fa fa-fw fa-facebook"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="<?php echo esc_url($team['onepage_member' . $count . '_g_plus_link']); ?>"><i class="fa fa-fw fa-google-plus"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="<?php echo esc_url($team['onepage_member' . $count . '_tw_link']); ?>"><i class="fa fa-fw fa-twitter"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="<?php echo esc_url($team['onepage_member' . $count . '_ln_link']); ?>"><i class="fa fa-fw fa-linkedin"></i></a>
-                                            </li>
-                                        </ul>
+                                        
                                     </div>
                                 </div>
-                                <?php
-                                $count++;
-                            }
-                            ?>
+
+ <?php endwhile; 
+ wp_reset_postdata();
+ else : ?>
+ <p><?php esc_html_e( 'Sorry, no posts matched your criteria.' ); ?></p>
+ <?php endif; ?>
                         </div>
                     </div>
                 </div>
