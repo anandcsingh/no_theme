@@ -3062,3 +3062,15 @@ a img.aligncenter {
 .page-template-tpl-fullwidth .blog_pages_wrapper a:active {
   color: #18bc9c;
 }
+
+.row-centered {
+  text-align:center;
+}
+.col-centered {
+  display:inline-block;
+  float:none;
+  /* reset the text-align */
+  text-align:left;
+  /* inline-block space fix */
+  margin-right:-4px;
+  }

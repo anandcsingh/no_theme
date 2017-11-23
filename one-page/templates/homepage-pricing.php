@@ -19,7 +19,9 @@ if (true) {
                     <div class="row">
                         <div class="pricing_wrapper">
                             <style></style>
+                            
                             <?php echo do_shortcode("[hrf_faqs]"); ?>
+                            
                         </div>
                     </div>
                 </div>
