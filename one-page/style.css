@@ -1407,12 +1407,12 @@ ul.bxslider {
   overflow: hidden;
 }
 .pricing_div .main_head {
-  color: #fff;
+  color: #3a0940;
 }
 .pricing_div .pricing_sep {
   width: 22%;
   height: 3px;
-  background: #fde08a;
+  background: #3a0940;
   border: none;
 }
 .pricing_div .main_desc {
@@ -1663,7 +1663,7 @@ ul.bxslider {
   padding: 7px 48px 5px 48px;
   margin-top: 0px;
   text-align: center;
-  background: #f5873e;
+  background: #e39d37;
   border-radius: 4px;
   font-size: 19px;
   font-weight: 600;
@@ -1819,7 +1819,7 @@ table a:not(.btn),
 .bottom_footer p {
   display: block;
   margin-bottom: 15px;
-  color: #d4af37;
+  color: #e39d37;
 }
 .bottom_footer .footer_social {
   list-style: none;
@@ -1831,7 +1831,7 @@ table a:not(.btn),
   margin: 0 2px;
 }
 .bottom_footer .footer_social li a {
-  background: #daa520;
+  background: #e39d37;
   border-radius: 50%;
   display: block;
   width: 28px;
@@ -3064,13 +3064,40 @@ a img.aligncenter {
 }
 
 .row-centered {
-  text-align:center;
+  text-align: center;
 }
 .col-centered {
-  display:inline-block;
-  float:none;
+  display: inline-block;
+  float: none;
   /* reset the text-align */
-  text-align:left;
+  text-align: left;
   /* inline-block space fix */
-  margin-right:-4px;
-  }
+  margin-right: -4px;
+}
+
+#package .btn {
+  color: white;
+  background-color: #3a0940;
+}
+
+#package .btn:hover {
+  color: white;
+  background-color: #e39d37;
+}
+
+#package,
+#package h1,
+#package h3 {
+  color: #2b074f;
+}
+
+#package .thumbnail a,
+#package .thumbnail {
+  color: #2b074f;
+  text-decoration: none;
+}
+
+#package .thumbnail a:hover {
+  color: #e39d37;
+  text-decoration: none;
+}

@@ -23,24 +23,33 @@ if (!empty($services)) {
                         </div>
                     </div>
                     <div class="row">
-                    <?php
-rewind_posts();
-$post_id = 336;
+                    <div class="col-sm-8">
+                    <?php $query = new WP_Query( 'cat=4' ); ?>			   
+ <?php if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
+<div class="col-md-4">
+      <div class="thumbnail">
+        <a href="<?php the_title(); ?>" target="_blank">
+          <?php the_post_thumbnail(); ?>
+          <div class="caption">
+            <?php the_content(); ?>
+          </div>
+        </a>
+      </div>
+    </div>
+ <?php endwhile; 
+ wp_reset_postdata();
+ else : ?>
+ <p><?php esc_html_e( 'Sorry, no posts matched your criteria.' ); ?></p>
+ <?php endif; ?>
+</div>
+<div class="col-sm-4">
+<?php
+$post_id = 214;
 $queried_post = get_post($post_id);
 ?>
-  <div class="col-sm-8">
-
-<?php if (has_post_thumbnail( $queried_post->ID ) ): ?>
-  <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $queried_post->ID ), 'single-post-thumbnail' ); ?>
-  <img src='<?php echo $image[0]; ?>' />
-
-<?php endif; ?>
-</div>
-                    <div class="col-sm-4">
-   
-				   
-												 
 <?php echo $queried_post->post_content; ?>
+
+</div>
 </div>
                     </div>
                 </div>
