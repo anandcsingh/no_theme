@@ -24,6 +24,7 @@ if (!empty($services)) {
                     </div>
                     <div class="row">
                     <div class="col-sm-8">
+<div class="row is-flex">
                     <?php $query = new WP_Query( 'cat=4' ); ?>			   
  <?php if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
 <div class="col-md-4">
@@ -35,12 +36,14 @@ if (!empty($services)) {
           </div>
         </a>
       </div>
+
     </div>
  <?php endwhile; 
  wp_reset_postdata();
  else : ?>
  <p><?php esc_html_e( 'Sorry, no posts matched your criteria.' ); ?></p>
  <?php endif; ?>
+</div>
 </div>
 <div class="col-sm-4">
 <?php

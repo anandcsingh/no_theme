@@ -35,7 +35,7 @@ if (is_active_sidebar('first-footer-widget-area') || is_active_sidebar('second-f
                         } else {
                             $logo = "<img src='" . ONEPAGE_DIR_URI . 'assets/images/site_logo.png' . "' alt='logo' />";
                         }
-                        $logo = "<img src='https://nightowlztt.com/wp-content/uploads/2017/11/footer-logo-e1509716637788.png' alt='logo' />";
+                        $logo = "<img src='https://nightowlztt.com/wp-content/uploads/2017/11/footer-e1511569350384.png' alt='logo' />";
                     }
                     echo $logo;
                     $socials = Onepage_Data::get_instance()->social();
@@ -66,6 +66,36 @@ if (is_active_sidebar('first-footer-widget-area') || is_active_sidebar('second-f
         </div>
     </div>
 </div>
+
 <?php wp_footer(); ?>
+
+<div>
+<script>
+$(function() {
+
+    var navItems = $(".page-template-tpl-fullwidth #menu-onepage-theme-menu li a");
+    for(var i = 0;i < navItems.length; i++) {
+        var link = $(navItems[i]);
+        if(link.attr("href").startsWith("#")) {
+            link.attr("href", "https://nightowlztt.com" + link.attr("href"));
+        }
+    }
+    var scroll_start = 0;
+   var startchange = $('#about');
+   var offset = startchange.offset();
+    if (startchange.length){
+   $(document).scroll(function() { 
+      scroll_start = $(this).scrollTop();
+      if(scroll_start > offset.top) { 
+          $(".navbar .nav_wrapper").css('background-color', '#3a0940');
+       } else {
+          $('.navbar .nav_wrapper').css('background-color', 'transparent');
+       }
+   });
+    }
+ });
+</script>
+</div>
+
 </body>
 </html>

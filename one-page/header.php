@@ -59,6 +59,7 @@
                 <div class="clearfix top"></div>
                 <!-- Navigation -->
                 <nav class="navbar navbar-default main-menu">
+<div class="nav_wrapper">
                     <div class="container">
                         <div class="row">
                             <div class="col-md-4">
@@ -75,12 +76,14 @@
                                             }
                                         } else {
                                             if (onepage_get_option('onepage_header_logo_img') != '') {
-                                                echo "<img src='" . onepage_get_option('onepage_header_logo_img', ONEPAGE_DIR_URI . 'assets/images/site_logo.png') . "' alt='logo' />";
+                                                echo "<img class='logo-onepage' src='" . onepage_get_option('onepage_header_logo_img', ONEPAGE_DIR_URI . 'assets/images/site_logo.png') . "' alt='logo' />";
                                             } else {
                                                 echo "<img src='" . ONEPAGE_DIR_URI . 'assets/images/site_logo.png' . "' alt='logo' />";
                                             }
                                         }
-                                        ?></a>
+                                        ?>
+                                        <img src="https://nightowlztt.com/wp-content/uploads/2017/11/logo-inverse.png" class="logo-fullpage"/>
+                                        </a>
                                     <!-- Brand and toggle get grouped for better mobile display -->
                                 </div>
                             </div>
@@ -106,6 +109,7 @@
                         <!-- /.navbar-collapse -->
                     </div>
                     <!-- /.container-fluid -->
+</div>
                 </nav>
             </div>
         </div>

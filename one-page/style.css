@@ -482,37 +482,70 @@ section .main_head {
   z-index: 1030;
   background: rgb(249, 249, 249);
 }
-.navbar-default .navbar-nav > .current > a,
-.navbar-default .navbar-nav > .current_page_item > a,
-.navbar-default .navbar-nav > .current > a:hover,
-.navbar-default .navbar-nav > .current > a:focus {
+.page-template-tpl-fullwidth .navbar-default .navbar-nav > .current_page_item > a,
+.page-template-tpl-fullwidth .navbar-default .navbar-nav > .current > a:hover,
+.page-template-tpl-fullwidth .navbar-default .navbar-nav > .current > a,
+.page-template-tpl-fullwidth .navbar-default .navbar-nav > .current > a:focus {
   background-color: #ffcc81;
   border-bottom: 2px solid #e39d37;
 }
-.navbar-default .navbar-nav > li > a {
+.page-template-tpl-fullwidth .navbar-default .navbar-nav > li > a {
   font-family: Montserrat, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #272727;
+					
 }
-.navbar-nav > li > a {
+.page-template-tpl-fullwidth .navbar-nav > li > a {
   padding-top: 26px;
   padding-bottom: 21px;
   font-size: 15px;
   border-bottom: 2px solid #fff;
   line-height: 21px;
 }
-.nav > li > a {
+.page-template-tpl-fullwidth .nav > li > a {
   position: relative;
   display: block;
   padding: 27px 16px 22px 16px;
 }
-.navbar-default .navbar-nav > li > a:focus {
+.page-template-tpl-fullwidth .navbar-default .navbar-nav > li > a:focus {
   background-color: #ffcc81;
   border-bottom: 2px solid #e39d37;
 }
-.navbar-default .navbar-nav > li > a:hover {
+.page-template-tpl-fullwidth .navbar-default .navbar-nav > li > a:hover {
   color: #444;
   border-bottom: 2px solid #e39d37;
   background-color: #eee;
+}										   
+													 
+												 
+												  
+							
+								   
+ 
+.page-template-tpl-onepage .navbar-default .navbar-nav > li > a {
+  font-family: Montserrat, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #fff;
+  font-weight: bold;
+}
+.page-template-tpl-onepage .navbar-nav > li > a {
+  padding-top: 26px;
+  padding-bottom: 21px;
+  font-size: 15px;
+								
+  line-height: 21px;
+}
+.page-template-tpl-onepage .nav > li > a {
+  position: relative;
+  display: block;
+  padding: 27px 16px 22px 16px;
+}
+.page-template-tpl-onepage .navbar-default .navbar-nav > li > a:focus {
+  color: #fff;
+  font-weight: bold;
+}
+.page-template-tpl-onepage .navbar-default .navbar-nav > li > a:hover {
+  color: #fff;
+  font-weight: bold;
+						 
 }
 .navbar-default .navbar-brand {
   color: #292929;
@@ -913,7 +946,7 @@ section .main_head {
   text-align: center;
   width: 75%;
   margin: 0 auto;
-  margin-top: 14%;
+  margin-top: 18%;
   position: relative;
   z-index: 99;
 }
@@ -1517,8 +1550,8 @@ ul.bxslider {
 }
 .team_wrapper .team_item img {
   max-width: 100%;
-  width: 257px;
-  height: 220px;
+			   
+				
 }
 .team_wrapper .team_item .team_image {
   width: 257px;
@@ -1898,12 +1931,12 @@ table a:not(.btn),
   opacity: 1;
 }
 
-.header .navbar {
-  background: #fff;
-  -webkit-box-shadow: 0 6px 4px -6px #908f8f;
-  -moz-box-shadow: 0 6px 4px -6px #908f8f;
-  box-shadow: 0 6px 4px -6px #908f8f;
-}
+
+				   
+											 
+										  
+									 
+ 
 .navbar-nav > li > a,
 .mean-container .mean-nav ul li li a {
   font-size: 13px;
@@ -3075,12 +3108,12 @@ a img.aligncenter {
   margin-right: -4px;
 }
 
-#package .btn {
+#package .btn, #about .btn {
   color: white;
   background-color: #3a0940;
 }
 
-#package .btn:hover {
+#package .btn:hover, #about .btn:hover {
   color: white;
   background-color: #e39d37;
 }
@@ -3101,3 +3134,91 @@ a img.aligncenter {
   color: #e39d37;
   text-decoration: none;
 }
+
+.row.is-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+.row.is-flex > [class*='col-'] {
+    display: flex;
+    flex-direction: column;
+}
+
+/*
+* And with max cross-browser enabled.
+* Nobody should ever write this by hand. 
+* Use a preprocesser with autoprefixing.
+*/
+.row.is-flex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.row.is-flex > [class*='col-'] {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+#about .thumbnail {
+  height: 100%;
+margin-top:7px;
+}
+
+
+.slider_sub {
+  color:white;
+}
+#nav-arrows {
+  display:none;
+}
+
+@media (max-width:991px) {
+  .page-template-tpl-onepage .logo-onepage {
+    display:none;
+  }
+ .navbar-brand {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+}
+@media (min-width:991px) {
+  .top_strip, .toggle_strip {
+    display: none !important;
+  }
+
+  .navbar {
+    background-color: #fff0 !important;
+color:white !important;
+font-weight:bold !important;
+border:none!important
+  }
+  #slider {
+    margin-top: -70px;
+  }
+
+  .page-template-tpl-onepage .logo-fullpage {
+    display:none;
+  }
+  .page-template-tpl-fullwidth .header {
+    position: absolute;
+  }
+  .page-template-tpl-fullwidth .header {
+    position: absolute;
+  }
+}
+.page-template-tpl-fullwidth .logo-onepage {
+  display:none;
+}
+

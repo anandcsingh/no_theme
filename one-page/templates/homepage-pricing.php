@@ -6,7 +6,7 @@ if (true) {
     if (true) {
         ?>
         <!-- pricing Section -->
-        <section id="faqs" class="section_7">
+        <section id="about" class="section_7">
             <div class="pricing_div">
                 <div class="container">
                     <div class="row">
@@ -18,10 +18,23 @@ if (true) {
                     </div>
                     <div class="row">
                         <div class="pricing_wrapper">
-                            <style></style>
-                            
-                            <?php echo do_shortcode("[hrf_faqs]"); ?>
-                            
+                        <div class="col-sm-8">
+                        <?php
+$post_id = 347;
+$queried_post = get_post($post_id);
+?>
+<?php echo $queried_post->post_content; ?>
+                        </div>
+                        <div class="col-sm-4">
+                        <div class="thumbnail">
+                        <?php if (has_post_thumbnail( $queried_post->ID ) ): ?>
+ +  <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $queried_post->ID ), 'single-post-thumbnail' ); ?>
+ +  <img src='<?php echo $image[0]; ?>' />
+ +
+ +<?php endif; ?>
+                        
+                        </div>
+                        </div>
                         </div>
                     </div>
                 </div>

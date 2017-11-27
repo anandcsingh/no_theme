@@ -27,9 +27,7 @@ if (!empty($sliders)) {
                                             <h2><?php echo esc_attr($slider['onepage_slider_heading']); ?></h2>
                                                 <div class="slider_sep"></div>
                                             <?php } ?>  
-                                            <?php if (!empty($slider['onepage_slider_subheading'])) { ?>
-                                                <p><?php echo esc_attr($slider['onepage_slider_subheading']); ?></p>
-                                            <?php } ?>
+                                            
                                             <?php if (!empty($slider['onepage_slider_button_link'])) { ?>
                                                 <div>
                                                     <a class="slider_button" href="<?php echo esc_url($slider['onepage_slider_button_link']); ?>">
@@ -37,6 +35,9 @@ if (!empty($sliders)) {
                                                     </a>
                                                 </div>
                                             <?php } ?>  
+                                            <?php if (!empty($slider['onepage_slider_subheading'])) { ?>
+                                                <div class="slider_sub"><?php echo esc_attr($slider['onepage_slider_subheading']); ?></div>
+                                            <?php } ?>
                                         </div>
                                     </div>
                                     <div class="slider_overlay" <?php echo "style='background-color:" . $slider['onepage_slider_overlay'] . "'"; ?>></div>
